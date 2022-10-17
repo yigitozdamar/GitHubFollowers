@@ -77,10 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				7FDD842828FDB3B400A672D0 /* Model */,
-				7FDD842728FD8B7E00A672D0 /* Support */,
 				7FDD842628FD8B3C00A672D0 /* Extensions */,
-				7FDD842528FD8AE800A672D0 /* Custom Views */,
 				7FDD842428FD8ABE00A672D0 /* Screens */,
+				7FDD842528FD8AE800A672D0 /* Custom Views */,
+				7FDD842728FD8B7E00A672D0 /* Support */,
+				7F0E169028FABA60000EA881 /* Info.plist */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -123,7 +124,6 @@
 				7F0E168428FABA5F000EA881 /* SceneDelegate.swift */,
 				7F0E168B28FABA60000EA881 /* Assets.xcassets */,
 				7F0E168D28FABA60000EA881 /* LaunchScreen.storyboard */,
-				7F0E169028FABA60000EA881 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
