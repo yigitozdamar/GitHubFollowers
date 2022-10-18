@@ -21,6 +21,7 @@
 		7FDD842328FD86DD00A672D0 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD842228FD86DD00A672D0 /* UIViewController+Ext.swift */; };
 		7FDD842A28FDB3C700A672D0 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD842928FDB3C700A672D0 /* Follower.swift */; };
 		7FDD842C28FDB4A300A672D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD842B28FDB4A300A672D0 /* User.swift */; };
+		7FEFD95E28FE77B200F8B3A2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEFD95D28FE77B200F8B3A2 /* NetworkManager.swift */; };
 		7FF35AA828FB2079002AD677 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF35AA728FB2079002AD677 /* GFButton.swift */; };
 		7FF35AAA28FB34C3002AD677 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF35AA928FB34C3002AD677 /* GFTextField.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		7FDD842228FD86DD00A672D0 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		7FDD842928FDB3C700A672D0 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		7FDD842B28FDB4A300A672D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FEFD95D28FE77B200F8B3A2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7FF35AA728FB2079002AD677 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		7FF35AA928FB34C3002AD677 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 		7F0E168128FABA5F000EA881 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				7FEFD95C28FE779F00F8B3A2 /* Managers */,
 				7FDD842828FDB3B400A672D0 /* Model */,
 				7FDD842628FD8B3C00A672D0 /* Extensions */,
 				7FDD842428FD8ABE00A672D0 /* Screens */,
@@ -135,6 +138,14 @@
 				7FDD842B28FDB4A300A672D0 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7FEFD95C28FE779F00F8B3A2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7FEFD95D28FE77B200F8B3A2 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				7F0E168328FABA5F000EA881 /* AppDelegate.swift in Sources */,
 				7FDD841D28FC657100A672D0 /* GFTitleLabel.swift in Sources */,
 				7FDD841B28FC646700A672D0 /* String+Ext.swift in Sources */,
+				7FEFD95E28FE77B200F8B3A2 /* NetworkManager.swift in Sources */,
 				7F0E168528FABA5F000EA881 /* SceneDelegate.swift in Sources */,
 				7FDD841F28FC673E00A672D0 /* GFBodyLabel.swift in Sources */,
 			);
