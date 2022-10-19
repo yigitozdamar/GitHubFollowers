@@ -14,7 +14,6 @@ class FollowerCell: UICollectionViewCell {
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAlignment: .center, fontSize: 16)
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -33,6 +32,7 @@ class FollowerCell: UICollectionViewCell {
         addSubview(usernameLabel)
         
         let padding: CGFloat = 8
+        translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
@@ -44,7 +44,6 @@ class FollowerCell: UICollectionViewCell {
             usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
-            
         ])
     }
 }
