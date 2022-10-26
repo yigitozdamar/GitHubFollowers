@@ -107,11 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				7FEFD95F28FECFFA00F8B3A2 /* Utilities */,
+				7FDD842628FD8B3C00A672D0 /* Extensions */,
 				7FEFD95C28FE779F00F8B3A2 /* Managers */,
 				7FDD842828FDB3B400A672D0 /* Model */,
-				7FDD842628FD8B3C00A672D0 /* Extensions */,
-				7FDD842428FD8ABE00A672D0 /* Screens */,
 				7FDD842528FD8AE800A672D0 /* Custom Views */,
+				7FDD842428FD8ABE00A672D0 /* Screens */,
 				7FDD842728FD8B7E00A672D0 /* Support */,
 				7F0E169028FABA60000EA881 /* Info.plist */,
 			);
