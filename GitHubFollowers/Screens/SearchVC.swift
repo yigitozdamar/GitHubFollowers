@@ -47,8 +47,6 @@ class SearchVC: UIViewController {
         usernameTextField.resignFirstResponder()
         
         let followerListVC = FollowerListVC(username: usernameTextField.text!)
-        //followerListVC.username = usernameTextField.text
-        //followerListVC.title = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
 
     }
@@ -64,7 +62,6 @@ class SearchVC: UIViewController {
         logoImageViewTopConstraint.isActive = true
         
         NSLayoutConstraint.activate([
-            //logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80), 60-61 rows
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
