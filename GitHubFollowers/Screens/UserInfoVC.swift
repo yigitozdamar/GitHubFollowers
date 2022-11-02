@@ -54,21 +54,35 @@ class UserInfoVC: UIViewController {
     }
     
     func getUserInfo() {
-        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
-            guard let self = self else { return }
-            
-            switch result {
-                    
-                case .success(let user):
-                    DispatchQueue.main.async {
-                        self.configureUIElements(with: user)
-                    }
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    self.presentGFAlertOnMainThread(title: "Something went wrong!", message: error.rawValue, buttonTitle: "Ok")
+        
+        Task{
+            do{
+                let user = try await NetworkManager.shared.getUserInfo(for: username)
+                self.configureUIElements(with: user)
+            }catch{
+                if let gfError = error as? GFError {
+                    presentGFAlert(title: "Something went wrong!", message: gfError.rawValue, buttonTitle: "Ok")
+                }else {
+                    presentDefaultError()
+                }
             }
         }
+        
+//        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
+//            guard let self = self else { return }
+//
+//            switch result {
+//
+//                case .success(let user):
+//                    DispatchQueue.main.async {
+//                        self.configureUIElements(with: user)
+//                    }
+//
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                    self.presentGFAlert(title: "Something went wrong!", message: error.rawValue, buttonTitle: "Ok")
+//            }
+//        }
     }
     
     func configureUIElements(with user: User) {
@@ -132,7 +146,9 @@ extension UserInfoVC: UserInfoVCDelegate {
     func didTapGitHubProfile(for user: User) {
         //show safari video controller
         guard let url = URL(string: user.htmlUrl  ) else {
-            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
+            DispatchQueue.main.async {
+                self.presentGFAlert(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
+            }
             return
         }
         
@@ -144,7 +160,9 @@ extension UserInfoVC: UserInfoVCDelegate {
         //Tell follower list screen the new user
         
         guard user.followers != 0 else {
-            presentGFAlertOnMainThread(title: "No followers", message: "This user has no follower.. What a shame 🥲", buttonTitle: "Ok")
+            DispatchQueue.main.async {
+                self.presentGFAlert(title: "No followers", message: "This user has no follower.. What a shame 🥲", buttonTitle: "Ok")
+            }
             return
         }
         delegate.didRequestFollowers(for: user.login)
